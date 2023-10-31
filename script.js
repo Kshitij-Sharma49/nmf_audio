@@ -55,6 +55,9 @@ document.getElementById("uploadButton").addEventListener("click", () => {
         // Make an HTTP POST request to the API
         fetch("http://127.0.0.1:5000/process_audio", {
             method: "POST",
+            headers: {
+            'Access-Control-Allow-Origin':'*'
+             },
             body: formData
         })
         .then(response => response.json())
@@ -99,6 +102,9 @@ document.getElementById("waveformButton").addEventListener("click", () => {
         // Make an HTTP POST request to the API
         fetch("http://127.0.0.1:5000/get_waveform", {
             method: "POST",
+            headers: {
+            'Access-Control-Allow-Origin':'*'
+             },
             body: formData
         })
         .then(response => response.blob())
