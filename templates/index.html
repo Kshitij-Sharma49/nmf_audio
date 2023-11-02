@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Audio Player with Waveform Visualization</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
     <h1>Audio Player with Waveform Visualization</h1>
@@ -25,7 +25,7 @@
     <br><br><br><br>
     <div id="compsList"></div>
     
-    <script src="script.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 
 </html>
