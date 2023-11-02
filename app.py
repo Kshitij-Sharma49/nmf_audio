@@ -27,7 +27,7 @@ CORS(app)
 
 @app.route('/')
 def serve_html():
-    return send_file('index.html')
+    return render_template('index.html')
 
 
 @app.route('/get_waveform', methods=['POST'])
